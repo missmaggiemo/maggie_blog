@@ -1,0 +1,26 @@
+<%= form_for(@blog_post) do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
+	<div class="field">
+    <%= f.label :author%>
+		<%= f.text_field :author, placeholder: "e.g., Maggie Moreno, dragon slayer" %>
+	</div>
+	<div class="field">
+    <%= f.label :category%>
+		<%= f.text_field :category, placeholder: "e.g., Hartl Tutorial, App Academy, Udacity CS253..." %>
+	</div>
+	<div class="field">
+    <%= f.label :title%>
+		<%= f.text_field :title, placeholder: "e.g., My personal war with CSS" %>
+	</div>
+	<div class="field">
+    <%= f.label :content%>
+		<%= f.text_area :content, placeholder: "Compose new blog post!" %>
+	</div>
+	<div class="field">
+    <%= f.label :content, "Image URL"%>
+		<%= f.text_field :image, placeholder: "Image URL" %>
+	</div>
+  <div class="submit">
+  	<%= f.submit "Post", class: "btn btn-large btn-primary" %>
+  </div>
+<%end%>

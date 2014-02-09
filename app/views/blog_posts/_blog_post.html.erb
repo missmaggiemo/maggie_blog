@@ -1,0 +1,30 @@
+<li id="blog_post_partial">
+  <div class="page-wrap">
+    <div class="post-title"><%= link_to blog_post.title, blog_post_path(blog_post.id) %></div>
+    <div class="time-author">
+      Posted  <%= time_ago_in_words(blog_post.created_at) %> ago by <%= link_to blog_post.author, user_path(blog_post.user_id) %>
+      <%if blog_post.created_at != blog_post.updated_at%>
+      | Updated <%= time_ago_in_words(blog_post.updated_at)%> ago
+      <%end%>
+    	<% if current_user?(blog_post.user) %>
+        |
+        <%= link_to "edit", edit_blog_post_path(blog_post.id) %>
+        |
+      	<%= link_to "delete", blog_post, method: :delete, data: {confirm: "Are you sure?"}, title: blog_post.title %>
+    	<%end%>
+    </div>
+  </div>
+  
+  <hr>
+  
+	<div class="page-wrap content">
+    <div class="pic">
+      <%= image_tag(blog_post.image, default: "Blog Post Image")%>
+    </div>
+    <div class="text">
+      <%=raw blog_post.content %>
+    </div>
+  </div>
+  
+  <div class="category">Category: <%= blog_post.category %></div>
+</li>

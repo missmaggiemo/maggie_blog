@@ -1,0 +1,13 @@
+<div class="top center blue">
+  <div class="page-wrap">
+    <div class="pic">
+      <%= image_tag(@user.image, alt: "User Image")%>
+    </div>
+    <div class="text">
+    	<h1><%= @user.name %></h1>
+    </div>
+  </div>
+</div>
+<div class="edit-user-form">
+  <%= render "form_for_user"%>
+</div>

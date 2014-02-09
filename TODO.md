@@ -1,4 +1,9 @@
-###Blog Posts
+#TODO
+
+Fix header and footer links.
+
+User profile link if signed in-- dropdown menu for site and for user options.
+
 
 *blog.missmaggiemo.com sub-domin, added as CNAME-- new rails project for blog, new Heroku*
 
@@ -12,3 +17,9 @@ later: should be able to search for a post via key words?
 
 blog.missmaggiemo.com?
 missmaggiemo.com/blog?
+
+### user management
+
+
+###blog posts
+
