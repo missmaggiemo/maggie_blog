@@ -1,5 +1,7 @@
 #TODO
 
+More blog posts before I really link it to my blog.
+
 User profile link if signed in-- dropdown menu for site and for user options.
 
 Truncate long blog posts on index page.
