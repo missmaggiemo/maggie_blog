@@ -480,13 +480,48 @@ footer {
 
 //blog post form
 
-form {
-  textarea {
-    width: 80vw;
-    height: 20vw;
-  }
-}
+.blog-form {
+	input, select, .uneditable-input {
+		border: 1px solid #bbb;
+		width: 60%;
+		margin-bottom: 15px;
+		@include box_sizing;
+	}
 
+	.span8 {
+    width: 700px;
+		float: center;
+		margin-left: auto;
+		margin-right: auto;
+		
+		@media (max-width: 900px) {
+			width: 80vw;
+		}
+	}
+
+	input {
+		height: auto !important;
+	}
+	
+	textarea {
+		border: 1px solid #bbb;
+		width: 100%;
+    height: 25vw;
+		min-height: 200px;
+		margin-bottom: 15px;
+		@include box_sizing;
+	}
+	
+	.btn {
+    width: 45%;
+		border: none;
+		background-color: $myBlueDark;
+		border-radius: 0;
+		background-image: none;
+		color: $white;
+		text-shadow: none;
+	}
+}
 
 
 //blog post partial
@@ -657,8 +692,6 @@ form {
 		text-shadow: none;
 	}
 }
-
-//signin form
 
 //system_error
 
