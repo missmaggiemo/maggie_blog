@@ -1,9 +1,8 @@
 #TODO
 
-Fix header and footer links.
-
 User profile link if signed in-- dropdown menu for site and for user options.
 
+Truncate long blog posts on index page.
 
 *blog.missmaggiemo.com sub-domin, added as CNAME-- new rails project for blog, new Heroku*
 
