@@ -19,6 +19,7 @@ class UsersController < ApplicationController
       # if the user has entered all the information
       sign_in @user
       # from sessions_helper.rb
+      MyMailer.email_new_user(@user).deliver
       flash[:success] = "Welcome, " + @user.name + "!"
       redirect_to @user
       # send user to their user page

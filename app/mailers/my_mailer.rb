@@ -18,4 +18,11 @@ class MyMailer < ActionMailer::Base
     mail(subject: "Blog post number #{blog_post.id} has been updated!")
   end
   
+  def email_new_user(user)
+    @name = user.name
+    @email = user.email
+    @id = user.id
+    mail(subject: "New user!")
+  end
+    
 end
