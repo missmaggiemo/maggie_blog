@@ -41,6 +41,7 @@ class BlogPostsController < ApplicationController
   end
   
   def destroy
+    MyMailer.email_destroy(@blog_post).deliver
     @blog_post.destroy
     redirect_to root_url
   end

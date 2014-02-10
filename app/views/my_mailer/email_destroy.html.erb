@@ -4,10 +4,11 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <p><strong><%= @user.name %> updated a blog post!</strong></p>
+    <p><strong>Blog post # <%= @blog_post.id %> has been deleted!</strong></p>
+    <p><%= @user.name.capitalize%> deleted blog post # <%= @blog_post.id %>.</p>
     <p>Title: <%= @blog_post.title %></p>
     <p>
-		<%=raw @blog_post.content  %>
+		<%=raw @blog_post.content %>
     </p>
     <p>
       Author Info: <%= @user.name %> at <%= @user.email %>.

@@ -4,13 +4,13 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <p><strong><%= @user %> posted a new blog post!</strong></p>
-    <p>Title: <%= @title%></p>
+    <p><strong><%= @user.name %> posted a new blog post!</strong></p>
+    <p>Title: <%= @blog_post.title %></p>
     <p>
-		<%=raw @content %>
+		<%=raw @blog_post.content %>
     </p>
     <p>
-      Author Info: <%= @user %> at <%= @email %>.
+      Author Info: <%= @user.name %> at <%= @user.email %>.
     </p>
   </body>
 </html>
