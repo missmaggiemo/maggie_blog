@@ -1,5 +1,7 @@
 #TODO
 
+####Set up mailer before I post any more blog posts.
+
 More blog posts before I really link it to my blog.
 
 User profile link if signed in-- dropdown menu for site and for user options.
@@ -17,7 +19,6 @@ Set up blog: model for posts, url for each post, "next" button for successive po
 later: should be able to search for a post via key words?
 
 blog.missmaggiemo.com?
-missmaggiemo.com/blog?
 
 ### user management
 
