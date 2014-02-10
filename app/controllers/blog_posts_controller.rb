@@ -14,6 +14,7 @@ class BlogPostsController < ApplicationController
   def create
     @blog_post = current_user.blog_posts.build(blog_post_params)
     if @blog_post.save
+      MyMailer.email_blog_post(@blog_post).deliver
       flash[:success] = "Posted!"
       redirect_to root_url
     else
@@ -31,6 +32,7 @@ class BlogPostsController < ApplicationController
   
   def update
     if @blog_post.update_attributes(blog_post_params)
+      MyMailer.email_update(@blog_post).deliver
       flash[:success] = "Blog post updated"
       redirect_to blog_post_path(@blog_post.id)
     else

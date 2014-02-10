@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p><strong><%= @user %> posted a new blog post!</strong></p>
+    <p>Title: <%= @title%></p>
+    <p>
+		<%=raw @content %>
+    </p>
+    <p>
+      Author Info: <%= @user %> at <%= @email %>.
+    </p>
+  </body>
+</html>
