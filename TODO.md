@@ -1,16 +1,13 @@
 #TODO
 
-####Set up mailer before I post any more blog posts.
-
-More blog posts before I really link it to my blog.
-
-User profile link if signed in-- dropdown menu for site and for user options.
+JSON feed, RSS feed?
 
 Truncate long blog posts on index page.
 
-*blog.missmaggiemo.com sub-domin, added as CNAME-- new rails project for blog, new Heroku*
+Encrypt cookies for user with bcrypt.
 
-*email every post submitted to admin@missmaggiemo.com*
+User profile link if signed in-- dropdown menu for site and for user options.
+
 
 *add ability to see all posts in a category*
 
