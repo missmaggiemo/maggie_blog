@@ -2,12 +2,15 @@
 
 JSON feed, RSS feed?
 
+Cache blog posts front page so that DB only gets queried after post.
+
 Truncate long blog posts on index page.
 
-Encrypt cookies for user with bcrypt.
+Encrypt cookies for user with bcrypt?
 
-User profile link if signed in-- dropdown menu for site and for user options.
 
+
+*User profile link if signed in-- dropdown menu for site and for user options.*
 
 *add ability to see all posts in a category*
 
@@ -15,7 +18,6 @@ Set up blog: model for posts, url for each post, "next" button for successive po
 
 later: should be able to search for a post via key words?
 
-blog.missmaggiemo.com?
 
 ### user management
 
