@@ -2,6 +2,13 @@
 	<h1>Blog Post # <%= @blog_post.id %> </h1>
 	<p><%= @blog_post.title %></p>
 </div>
+
 <div class="blog-post">
   <%= render @blog_post %>
+</div>
+
+<div class="next-link">
+	<%= link_to("< Previous Post", blog_post_path(@prev_post.id)) if @prev_post %>
+	|
+	<%= link_to("Next Post >", blog_post_path(@next_post.id)) if @next_post %>
 </div>

@@ -2,15 +2,15 @@ class BlogPostsController < ApplicationController
   before_action :signed_in_user, only: [:new, :edit, :update, :create, :destroy]
   before_action :admin_user, only: [:new, :edit, :update, :create, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
-  
+
   def index
     @blog_posts = BlogPost.paginate(page: params[:page])
   end
-  
+
   def new
     @blog_post = BlogPost.new
   end
-  
+
   def create
     @blog_post = current_user.blog_posts.build(blog_post_params)
     if @blog_post.save
@@ -21,15 +21,17 @@ class BlogPostsController < ApplicationController
       render 'blog_post/index'
     end
   end
-  
+
   def show
     @blog_post = BlogPost.find(params[:id])
+    @prev_post = BlogPost.find_by_id(params[:id].to_i - 1)
+    @next_post = BlogPost.find_by_id(params[:id].to_i + 1)
   end
-  
+
   def edit
     @blog_post = BlogPost.find(params[:id])
   end
-  
+
   def update
     if @blog_post.update_attributes(blog_post_params)
       MyMailer.email_update(@blog_post).deliver
@@ -39,25 +41,25 @@ class BlogPostsController < ApplicationController
       render 'edit'
     end
   end
-  
+
   def destroy
     MyMailer.email_destroy(@blog_post).deliver
     @blog_post.destroy
     redirect_to root_url
   end
-  
-  
+
+
   private
-  
+
   def blog_post_params
     params.require("blog_post").permit(:category, :author, :title, :content, :image)
   end
-  
+
   def correct_user
     @blog_post = current_user.blog_posts.find_by(id: params[:id])
     redirect_to root_path if @blog_post.nil?
   end
-  
+
   def admin_user
     redirect_to(root_url) unless current_user.admin?
   end
