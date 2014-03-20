@@ -22,4 +22,4 @@ doc/
 .DS_Store
 .idea
 .secret
-/config/environments/.*
+/config/environments
