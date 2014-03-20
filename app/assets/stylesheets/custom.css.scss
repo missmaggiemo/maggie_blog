@@ -482,6 +482,16 @@ footer {
 	text-align: center;
 }
 
+.pagination {
+	text-align: center;
+
+	.previous_page, .next_page {
+		margin: 10px;
+	}
+
+}
+
+
 //blog post form
 
 .blog-form {

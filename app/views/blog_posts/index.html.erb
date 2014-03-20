@@ -4,12 +4,14 @@
 </div>
 
 <div class="blog-home">
-  
+
   <%if @blog_posts%>
   	<ol class="blog_posts">
   		<%= render @blog_posts %>
   	</ol>
-  	<%= will_paginate @blog_posts, page_links: false, previous_label: 'Newer', next_label: 'Older' %>
+
+  	<%= will_paginate @blog_posts, page_links: false, previous_label: '< Newer', next_label: 'Older >' %>
+
   <%end%>
-  
+
 </div>

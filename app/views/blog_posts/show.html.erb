@@ -7,8 +7,7 @@
   <%= render @blog_post %>
 </div>
 
-<div class="next-link">
-	<%= link_to("< Previous Post", blog_post_path(@prev_post.id)) if @prev_post %>
-	|
-	<%= link_to("Next Post >", blog_post_path(@next_post.id)) if @next_post %>
+<div class="pagination">
+	<%= link_to("< Newer", blog_post_path(@next_post.id), class: "next_page") if @next_post %>
+	<%= link_to("Older >", blog_post_path(@prev_post.id), class: "previous_page") if @prev_post %>
 </div>
