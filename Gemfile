@@ -15,6 +15,7 @@ gem 'will_paginate', '3.0.4'
 gem 'mail', '2.5.4'
 # emails
 
+gem 'sass', '3.2.13'
 gem 'sass-rails', '4.0.1'
 # sass for css
 gem 'uglifier', '2.1.1'
@@ -27,7 +28,6 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 # JSON builder
 gem 'sprockets', '2.11.0'
-# part of turbolinks, I think?
 
 
 group :development, :test do
