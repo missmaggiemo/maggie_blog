@@ -4,4 +4,5 @@ class BlogPost < ActiveRecord::Base
   validates :user_id, presence: true
   validates :author, presence: true
   validates :content, presence: true
+  
 end

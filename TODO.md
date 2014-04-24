@@ -1,5 +1,9 @@
 # TODO
 
+
+Redo user authentication.
+
+
 Site redesign for new bootstrap?
 
 
